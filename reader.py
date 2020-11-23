@@ -7,13 +7,13 @@ from config import config
 config = config()
 # from utils import * # Not used in key_gen
 import sys
-sys.path.insert(0,config.dict_path)
+sys.path.insert(0, config.dict_path)
 # from dict_use import * # Dictionary is not used in key_gen
 tt_proportion = 0.9
 
 class dataset(object):
     def __init__(self, input, sequence_length, target):
-        self.input = input
+        self.input = inputx
         self.target = target
         self.sequence_length = sequence_length
         self.length = len(input)
@@ -24,7 +24,8 @@ class dataset(object):
         ret_sequence_length =  self.sequence_length[step * batch_size: (step + 1) * batch_size]
         ret_target = self.target[step * batch_size: (step + 1) * batch_size]
         return ret_input, ret_sequence_length, ret_target
-        
+
+# function for training and testing the data  
 def array_data(data, max_length, dict_size, shuffle = False):
     max_length_m1 = max_length - 1
     if shuffle == True:
@@ -46,8 +47,10 @@ def array_data(data, max_length, dict_size, shuffle = False):
         data[i].append(dict_size + 1)
     target = np.array(data).astype(np.int32)
     input = np.concatenate([np.ones([len(data), 1]) * (dict_size + 2), target[:, :-1]], axis = 1).astype(np.int32)
+    # tensoflow function
     return dataset(input, sequence_length, target)
-        
+
+# function for reading the data 
 def read_data(file_name, max_length, dict_size = config.dict_size):
 	if file_name[-3:]=='pkl':
 	    data = pkl.load(open(file_name))
@@ -56,10 +59,12 @@ def read_data(file_name, max_length, dict_size = config.dict_size):
 	        data = []
 	        for line in f:
 	            data.append(sen2id(line.strip().split()))
+    # train and test the data using array_data
 	train_data = array_data(data[ : int(len(data) * tt_proportion)], max_length, dict_size, shuffle = True)
 	test_data = array_data(data[int(len(data) * tt_proportion) : ], max_length, dict_size, shuffle = True)
 	return train_data, test_data
-	
+
+# read data from input file and use them
 def read_data_use(file_name, max_length, dict_size = config.dict_size):
     if file_name[-3:] == 'pkl':
         data = pkl.load(open(file_name))
@@ -67,10 +72,10 @@ def read_data_use(file_name, max_length, dict_size = config.dict_size):
     else:
         with open(file_name) as f:
             data = []
-            vector = []
             sta_vec_list = []
             j = 0
             for line in f:
+                # initialize
                 sta_vec = list(np.zeros([config.num_steps-1]))
                 line = sen2id(line.strip().lower().split())
                 key = choose_key(line, config.key_num)
@@ -81,7 +86,7 @@ def read_data_use(file_name, max_length, dict_size = config.dict_size):
     data_new = array_data(data, max_length, dict_size)
     return data_new, sta_vec_list
     
-    
+# local function only used in reader.py to choose keys
 def choose_key(line, num):
     ind_list = range(len(line))
     np.random.shuffle(ind_list)
