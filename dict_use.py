@@ -2,7 +2,7 @@ import pickle as pkl
 
 class dict_use:
     '''
-    Manages word --> index and index --> word conversion
+    Manages (sentence --> indices) and (indices --> sentence) conversion
     '''
     def __init__(self, dict_path):
         self.Dict1, self.Dict2 = pkl.load(open(dict_path, 'rb'))
