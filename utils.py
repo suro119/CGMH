@@ -54,7 +54,7 @@ def cut_from_point(input, sequence_length, ind, mode = 0): # mode could be 0 or 
     batch_size = input.shape[0]
     num_steps = input.shape[1]
 
-    # Initialize
+    # Initialize to EOS
     input_forward = np.zeros([batch_size, num_steps]) + config.dict_size + 1 # dict_size = 50000
     input_backward = np.zeros([batch_size, num_steps]) + config.dict_size + 1
 
@@ -62,6 +62,7 @@ def cut_from_point(input, sequence_length, ind, mode = 0): # mode could be 0 or 
     sequence_length_backward = np.zeros([batch_size])
 
     for i in range(batch_size):
+        # Set to BOS
         input_forward[i][0] = config.dict_size + 2
         input_backward[i][0] = config.dict_size + 2
         length = sequence_length[i] - 1
@@ -85,26 +86,35 @@ def cut_from_point(input, sequence_length, ind, mode = 0): # mode could be 0 or 
 
 
 
-def generate_candidate_input(input, sequence_length, ind, prob, search_size, mode = 0):
+def generate_candidate_input(input, sequence_length, ind, prob, search_size, mode=0):
     input_new = np.array([input[0]] * search_size)
     sequence_length_new = np.array([sequence_length[0]] * search_size)
     length = sequence_length[0] - 1
 
+    # If not deleting, 'ind_token' is the list of 'search_size' word indices with the highest probability
     if mode != 2:
         ind_token = np.argsort(prob[:config.dict_size])[-search_size:]
     
+    # If deleting
     if mode == 2:
+        # Replace input[:, 'ind'+1:length-1] with input[:, 'ind'+2:length]
+        # In other words, remove input[:, 'ind'+1]
+        # 'ind' + 1 to account for BOS token
         for i in range(sequence_length[0]-ind-2):
             input_new[:, ind+i+1] = input_new[:, ind+i+2]
+        # Add EOS token to leftover elements
         for i in range(sequence_length[0]-1, config.num_steps-1):
-            input_new[:, i] = input_new[:, i] * 0 + config.dict_size + 1
+            input_new[:, i] = input_new[:, i] * 0 + config.dict_size + 1 # why multiply by 0?
         sequence_length_new = sequence_length_new - 1
         return input_new[:1], sequence_length_new[:1]
+
+    # If inserting, make space for the new word to be inserted
     if mode == 1:
         for i in range(0, sequence_length_new[0]-1-ind):
             input_new[:, sequence_length_new[0]-i] = input_new[:,  sequence_length_new[0] - 1 - i]
         sequence_length_new = sequence_length_new + 1
 
+    # Insert the candidate words
     for i in range(search_size):
         input_new[i][ind+1] = ind_token[i]
 
@@ -115,7 +125,7 @@ def generate_candidate_input(input, sequence_length, ind, prob, search_size, mod
 def sample_from_candidate(prob_candidate):
     return choose_action(normalize(prob_candidate))
 
-# Used only once to select action from the candidates (normalized prob_candidate)
+# Used to choose/sample an action given a list of probabilities
 def choose_action(c):
     r = np.random.random()
     c = np.array(c)
