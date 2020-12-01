@@ -16,7 +16,7 @@ for j in range(sequence_length[0] - 1):
 tem *= prob_old[0][j+1][config.dict_size+1]
 prob_old_prob = tem
 
-# refer to 218 fro sta_vec
+# sta_vec = list(np.zeros([config.num_steps-1]))
 if sim != None:
   similarity_old = similarity(input[0], input_original, sta_vec)
   prob_old_prob = prob_old_prob * similarity_old
