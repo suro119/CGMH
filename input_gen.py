@@ -171,30 +171,18 @@ for sen_id in range(len(use_data)):  # For each sentence in the list of sentence
 
 # CGMH deletion: line 367-450 (찬희)
 #word deletion(action: 2)
- 
                   if action == 2 and ind < sequence_length[0] - 1:
                         if sequence_length[0] <= 2:
                               # skip word
                               action = 3
                         else:
                               prob_old = run_epoch(session, mtest_forward, input, sequence_length, mode='use')
-                        if config.double_LM == True:
-                              # reverse the sequence
-                              input_backward, _, _ = reverse_seq(input, sequence_length, input)
-                              prob_old = (prob_old + run_epoch(session, mtest_backward, input_backward, sequence_length, mode='use')) * 0.5
-
+                             
                         tem = 1
                         for j in range(sequence_length[0] - 1):
                               tem *= prob_old[0][j][input[0][j+1]]
                         tem *= prob_old[0][j+1][config.dict_size+1]
                         prob_old_prob = tem
-
-                        # sta_vec = list(np.zeros([config.num_steps-1]))
-                        if sim != None:
-                              similarity_old = similarity(input[0], input_original, sta_vec)
-                              prob_old_prob = prob_old_prob * similarity_old
-                        else:
-                              similarity_old = -1
 
                         input_candidate, sequence_length_candidate = generate_candidate_input(input, sequence_length, ind, None, config.search_size, mode=2)
                         prob_new = run_epoch(session, mtest_forward, input_candidate, sequence_length_candidate, mode='use')
@@ -206,20 +194,12 @@ for sen_id in range(len(use_data)):  # For each sentence in the list of sentence
                         tem *= prob_new[0][j+1][config.dict_size+1]
                         prob_new_prob = tem
 
-                        if sim != None:
-                              similarity_new = similarity_batch(input_candidate, input_original, sta_vec)
-                              prob_new_prob = prob_new_prob * similarity_new
-
                         input_forward, input_backward, sequence_length_forward, sequence_length_backward = cut_from_point(input, sequence_length, ind, mode=0)
                         prob_forward = run_epoch(session, mtest_forward, input_forward, sequence_length_forward, mode='use')[0, ind % (sequence_length[0]-1),:]
                         prob_backward = run_epoch(session, mtest_backward, input_backward, sequence_length_backward, mode='use')[0, sequence_length[0] - 1 - ind%(sequence_length[0]-1),:]
                         prob_mul = (prob_forward * prob_backward)
                         input_candidate, sequence_length_candidate = generate_candidate_input(input, sequence_length, ind, prob_mul, config.search_size, mode=0)
                         prob_candidate_pre = run_epoch(session, mtest_forward, input_candidate, sequence_length_candidate, mode='use')
-
-                        if config.double_LM == True:
-                              input_candidate_backward, _, _ = reverse_seq(input_candidate, sequence_length_candidate, input_candidate)
-                              prob_candidate_pre = (prob_candidate_pre+run_epoch(session, mtest_backward, input_candidate_backward, sequence_length_candidate, mode='use'))*0.5
 
                         prob_candidate = []
                         for i in range(config.search_size):
@@ -231,10 +211,6 @@ for sen_id in range(len(use_data)):  # For each sentence in the list of sentence
                               prob_candidate.append(tem)
                         prob_candidate = np.array(prob_candidate)
 
-                        if sim != None:
-                              similarity_candidate = similarity_batch(input_candidate, input_original,sta_vec)
-                              prob_candidate = prob_candidate * similarity_candidate
-
                         #alpha is acceptance ratio of current proposal
                         prob_candidate_norm = normalize(prob_candidate)
                         if input[0] in input_candidate:
@@ -243,14 +219,13 @@ for sen_id in range(len(use_data)):  # For each sentence in the list of sentence
                                           break
                                     pass
                               # calculate the acceptance rate
-                              xprime = prob_candidate_norm[candidate_ind] * prob_new_prob * config.action_prob[1]
-                              x_t = config.action_prob[2] * prob_old_prob
-                              alpha = min(xprime/x_t, 1)
+                              numer = prob_candidate_norm[candidate_ind] * prob_new_prob * config.action_prob[1]
+                              denom = config.action_prob[2] * prob_old_prob
+                              alpha = min(numer/denom, 1)
                         else:
                               pass
                               alpha = 0
 
-                        print('action:2', alpha, prob_old_prob, prob_new_prob, prob_candidate_norm[candidate_ind], similarity_old)
                         if ' '.join(id2sen(input[0])) not in output_p:
                               outputs.append([' '.join(id2sen(input[0])), prob_old_prob])
 
