@@ -184,6 +184,7 @@ for sen_id in range(len(use_data)):  # For each sentence in the list of sentence
                         tem *= prob_old[0][j+1][config.dict_size+1]
                         prob_old_prob = tem
 
+                        # find the probability of deleted sentence 
                         input_candidate, sequence_length_candidate = generate_candidate_input(input, sequence_length, ind, None, config.search_size, mode=2)
                         prob_new = run_epoch(session, mtest_forward, input_candidate, sequence_length_candidate, mode='use')
 
@@ -198,6 +199,8 @@ for sen_id in range(len(use_data)):  # For each sentence in the list of sentence
                         prob_forward = run_epoch(session, mtest_forward, input_forward, sequence_length_forward, mode='use')[0, ind % (sequence_length[0]-1),:]
                         prob_backward = run_epoch(session, mtest_backward, input_backward, sequence_length_backward, mode='use')[0, sequence_length[0] - 1 - ind%(sequence_length[0]-1),:]
                         prob_mul = (prob_forward * prob_backward)
+
+                        # find the probability of candidate words that may be replaced in the deleted space
                         input_candidate, sequence_length_candidate = generate_candidate_input(input, sequence_length, ind, prob_mul, config.search_size, mode=0)
                         prob_candidate_pre = run_epoch(session, mtest_forward, input_candidate, sequence_length_candidate, mode='use')
 
@@ -211,8 +214,10 @@ for sen_id in range(len(use_data)):  # For each sentence in the list of sentence
                               prob_candidate.append(tem)
                         prob_candidate = np.array(prob_candidate)
 
-                        #alpha is acceptance ratio of current proposal
+                        # alpha is acceptance ratio of current proposal
                         prob_candidate_norm = normalize(prob_candidate)
+
+                        # among the 100 candidates, if the word to be deleted is not included in the candidates, set alpha to 0    
                         if input[0] in input_candidate:
                               for candidate_ind in range(len(input_candidate)):
                                     if input[0] in input_candidate[candidate_ind: candidate_ind+1]:
