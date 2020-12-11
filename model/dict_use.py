@@ -22,8 +22,8 @@ class dict_use:
         s_new = []
         if not isinstance(s[0], list):
             for item in s:
-                if item in Dict:
-                    s_new.append(Dict[item])
+                if item.lower() in Dict:
+                    s_new.append(Dict[item.lower()])
                 else:
                     s_new.append(self.UNK)  # Replaced dict_size in original code
             return s_new

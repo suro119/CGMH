@@ -5,7 +5,7 @@ dict_size = 30000
 
 with open('1-billion.txt', 'r') as f:
     sentence = f.read()
-counter = Counter(sentence.split())
+counter = Counter(list(map(lambda w: w.lower(), sentence.split())))
 counter = counter.most_common(dict_size)
 
 words = list(zip(*counter))[0]
