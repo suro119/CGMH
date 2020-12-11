@@ -8,7 +8,7 @@ config = config()
 import sys
 sys.path.insert(0, config.skipthoughts_path) # '../skip_thoughts'
 sys.path.insert(0, config.dict_path)
-sys.path.insert(0, './dict_use') # Adjust according to the new directory structure
+sys.path.insert(0, '../utils/dict_emb') # Adjust according to the new directory structure
 
 from dict_use import dict_use
 dict_use = dict_use(config.dict_path)
@@ -30,8 +30,8 @@ def reverse_seq(input, sequence_length, target):
     num_steps = input.shape[1]
 
     # Initialize
-    input_new = np.zeros([batch_size, num_steps]) + config.dict_size + 1 # dict_size = 50000
-    target_new = np.zeros([batch_size, num_steps]) + config.dict_size + 1
+    input_new = np.zeros([batch_size, num_steps]) + config.dict_size + 3 # config.dict_size + 3: Mask token
+    target_new = np.zeros([batch_size, num_steps]) + config.dict_size + 3
 
     for i in range(batch_size):
         length = sequence_length[i] - 1
@@ -39,11 +39,13 @@ def reverse_seq(input, sequence_length, target):
         # Set target_new
         for j in range(length):
             target_new[i][j] = target[i][length-1-j]
+        target_new[i][length+1] = config.dict_size + 2 # EOS
         
         # Set input_new
-        input_new[i][0] = config.dict_size + 2
+        input_new[i][0] = config.dict_size + 2  # BOS
         for j in range(length):
             input_new[i][j+1] = input[i][length-j]
+        input_new[i][length+1] = config.dict_size + 2  # EOS
         
     return input_new.astype(np.int32), sequence_length.astype(np.int32), target_new.astype(np.int32)
 
@@ -51,12 +53,18 @@ def reverse_seq(input, sequence_length, target):
 # Cut at 'ind'
 # Generate backwards for replacement and insertion only.
 def cut_from_point(input, sequence_length, ind, mode = 0): # mode could be 0 or action no.
+    if isinstance(input, list):
+        input = np.array(input)
+
+    if isinstance(sequence_length, list):
+        sequence_length = np.array(sequence_length)
+
     batch_size = input.shape[0]
     num_steps = input.shape[1]
 
-    # Initialize to EOS
-    input_forward = np.zeros([batch_size, num_steps]) + config.dict_size + 1 # dict_size = 50000
-    input_backward = np.zeros([batch_size, num_steps]) + config.dict_size + 1
+    # Initialize to Mask
+    input_forward = np.zeros([batch_size, num_steps]) + config.dict_size + 3 # dict_size = 50000
+    input_backward = np.zeros([batch_size, num_steps]) + config.dict_size + 3
 
     sequence_length_forward = np.zeros([batch_size])
     sequence_length_backward = np.zeros([batch_size])
@@ -70,16 +78,19 @@ def cut_from_point(input, sequence_length, ind, mode = 0): # mode could be 0 or 
         # Set input_forward & sequence_length_forward
         for j in range(ind):
             input_forward[i][j+1] = input[i][j+1]
+        input_forward[i][ind+1] = config.dict_size + 1  # EOS
         sequence_length_forward[i] = ind + 1
 
         # Set input_backward & sequence_length_backward
         if mode == 0:
             for j in range(length-ind-1):
                 input_backward[i][j+1] = input[i][length-j]
+            input_backward[i][length-ind] = config.dict_size + 1  # EOS
             sequence_length_backward[i] = length - ind
         elif mode == 1:
             for j in range(length-ind):
                 input_backward[i][j+1] = input[i][length-j]
+            input_backward[i][length-ind+1] = config.dict_size + 1  # EOS
             sequence_length_backward[i] = length - ind + 1
     
     return input_forward.astype(np.int32), input_backward.astype(np.int32), sequence_length_forward.astype(np.int32), sequence_length_backward.astype(np.int32)
@@ -102,9 +113,9 @@ def generate_candidate_input(input, sequence_length, ind, prob, search_size, mod
         # 'ind' + 1 to account for BOS token
         for i in range(sequence_length[0]-ind-2):
             input_new[:, ind+i+1] = input_new[:, ind+i+2]
-        # Add EOS token to leftover elements
+        # Add Mask token to leftover elements
         for i in range(sequence_length[0]-1, config.num_steps-1):
-            input_new[:, i] = input_new[:, i] * 0 + config.dict_size + 1 # why multiply by 0?
+            input_new[:, i] = config.dict_size + 3
         sequence_length_new = sequence_length_new - 1
         return input_new[:1], sequence_length_new[:1]
 
@@ -143,9 +154,3 @@ def just_acc():
     r = np.random.random()
     if r < config.just_acc_rate: # config.just_acc_rate = 0.0
         return 0
-    else:
-        return 1
-
-def write_log(str, path):
-    with open(path, 'a') as g:
-        g.write(str + '\n')
