@@ -7,7 +7,7 @@ class config(object):
         self.skipthoughts_path='../skip_thoughts'                  #path of skipthoughts, used when config.sim=='skipthoughts' or config.sim=='combine'
         self.pos_path='../POS/english-models'                       #path for pos tagger
         
-        self.dict_size=50000
+        self.dict_size=30000
         self.vocab_size=self.dict_size+3
         
         self.forward_save_path='./models/forward'
