@@ -34,7 +34,7 @@ def array_data(data, max_length, dict_size, is_backward=False, shuffle=False):
         else:
             data[i].append(dict_size + 1)
             for j in range(max_length_m1 - len(data[i])):
-                data[i].append(dict_size + 3)
+                data[i].append(dict_size + 3)  # Add masks
         data[i].append(dict_size + 1)  # Appends EOS token at the end of the sentence
     
     target = np.array(data).astype(np.int32)
