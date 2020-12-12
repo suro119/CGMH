@@ -78,19 +78,19 @@ def cut_from_point(input, sequence_length, ind, mode = 0): # mode could be 0 or 
         # Set input_forward & sequence_length_forward
         for j in range(ind):
             input_forward[i][j+1] = input[i][j+1]
-        input_forward[i][ind+1] = config.dict_size + 1  # EOS
+        #input_forward[i][ind+1] = config.dict_size + 1  # EOS
         sequence_length_forward[i] = ind + 1
 
         # Set input_backward & sequence_length_backward
         if mode == 0:
             for j in range(length-ind-1):
                 input_backward[i][j+1] = input[i][length-j]
-            input_backward[i][length-ind] = config.dict_size + 1  # EOS
+            #input_backward[i][length-ind] = config.dict_size + 1  # EOS
             sequence_length_backward[i] = length - ind
         elif mode == 1:
             for j in range(length-ind):
                 input_backward[i][j+1] = input[i][length-j]
-            input_backward[i][length-ind+1] = config.dict_size + 1  # EOS
+            #input_backward[i][length-ind+1] = config.dict_size + 1  # EOS
             sequence_length_backward[i] = length - ind + 1
     
     return input_forward.astype(np.int32), input_backward.astype(np.int32), sequence_length_forward.astype(np.int32), sequence_length_backward.astype(np.int32)

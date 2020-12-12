@@ -8,6 +8,7 @@ from config import config
 config = config()
 from utils import *
 import sys
+import copy
 sys.path.insert(0, config.dict_path)
 # from dict_use import * # Dictionary is not used in key_gen
 tt_proportion = 0.9
@@ -28,18 +29,30 @@ def array_data(data, max_length, dict_size, is_backward=False, shuffle=False):
         else:
             sequence_length.append(item + 1)  # Adding 1 to account for BOS token or EOS token
     sequence_length = np.array(sequence_length)
-    for i in range(len(data)):
-        if len(data[i]) >= max_length_m1:
-            data[i] = data[i][:max_length_m1]
-            data[i].append(dict_size + 1)
+
+    input = copy.deepcopy(data)
+    target = copy.deepcopy(data)
+    # Create input
+    for i in range(len(input)):
+        if len(input[i]) >= max_length_m1:
+            input[i] = [dict_size + 2] + input[i][:max_length_m1]
         else:
-            data[i].append(dict_size + 1)
-            for j in range(max_length_m1 - len(data[i])):
-                data[i].append(dict_size + 3)  # Add masks
+            input[i] = [dict_size + 2] + input[i]
+            for j in range(max_length_m1 - len(input[i])):
+                input[i].append(dict_size + 3)  # Add masks
     
-    target = np.array(data).astype(np.int32)
-    # Concatenates BOS token along with the rest of the sentence
-    input = np.concatenate([np.ones([len(data), 1]) * (dict_size + 2), target[:, :-1]], axis=1).astype(np.int32)
+    # Create target
+    for i in range(len(target)):
+        if len(target[i]) >= max_length_m1:
+            target[i] = target[i][:max_length_m1]
+            target[i].append(dict_size + 1)
+        else:
+            target[i].append(dict_size + 1)
+            for j in range(max_length_m1 - len(target[i])):
+                target[i].append(dict_size + 3)  # Add masks
+    
+    input = np.array(input).astype(np.int32)
+    target = np.array(target).astype(np.int32)
 
     if is_backward:
         input, sequence_length, target = reverse_seq(input, sequence_length, target)
