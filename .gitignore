@@ -1,2 +1,6 @@
 checkpoints/backward/*
 checkpoints/forward/*
+
+# Keep the directories
+!checkpoints/backward/.gitkeep
+!checkpoints/forward/.gitkeep
