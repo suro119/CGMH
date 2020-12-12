@@ -61,8 +61,6 @@ class LangModel():
     def predict(self, input):
         if isinstance(input, list):
             input = np.array(input)
-        print(input)
-        print(input.shape)
         logits = self.model.predict(input)
         probs = self.softmax(logits).numpy()
 
