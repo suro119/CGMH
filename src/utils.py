@@ -39,13 +39,12 @@ def reverse_seq(input, sequence_length, target):
         # Set target_new
         for j in range(length):
             target_new[i][j] = target[i][length-1-j]
-        target_new[i][length+1] = config.dict_size + 2 # EOS
+        target_new[i][length] = config.dict_size + 1 # EOS
         
         # Set input_new
         input_new[i][0] = config.dict_size + 2  # BOS
         for j in range(length):
             input_new[i][j+1] = input[i][length-j]
-        input_new[i][length+1] = config.dict_size + 2  # EOS
         
     return input_new.astype(np.int32), sequence_length.astype(np.int32), target_new.astype(np.int32)
 
@@ -83,11 +82,13 @@ def cut_from_point(input, sequence_length, ind, mode = 0): # mode could be 0 or 
 
         # Set input_backward & sequence_length_backward
         if mode == 0:
+            # Removing word at ind + 1 during cut
             for j in range(length-ind-1):
                 input_backward[i][j+1] = input[i][length-j]
             #input_backward[i][length-ind] = config.dict_size + 1  # EOS
             sequence_length_backward[i] = length - ind
         elif mode == 1:
+            # Do not remove word at ind + 1 during cut
             for j in range(length-ind):
                 input_backward[i][j+1] = input[i][length-j]
             #input_backward[i][length-ind+1] = config.dict_size + 1  # EOS
