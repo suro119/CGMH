@@ -137,7 +137,7 @@ def main():
         output_p = []
         for iter in range(config.sample_time):
             print('\n\n-------------------Iter: {}--------------------'.format(iter))
-            config.sample_prior = [1, 500.0/sequence_length, 1, 1]
+            config.sample_prior = [1, 100.0/sequence_length, 1, 1]
             if iter % 20 < 10:
                 config.threshold = 0
             else:
@@ -332,7 +332,7 @@ def main():
 
                 # if deletion of word fits under acceptance rate, delete
                 if choose_action([alpha, 1 - alpha]) == 0 and (prob_new_prob > prob_old_prob * config.threshold or just_acc() == 0):
-                    input = np.concatenate([input[:ind+1], input[ind+2:], input[:1] * 0 + config.dict_size + 1])
+                    input = np.concatenate([input[:ind+1], input[ind+2:], input[:1] * 0 + config.dict_size + 3])
                     # deleted
                     sequence_length -= 1
                     pos += 0
