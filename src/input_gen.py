@@ -69,7 +69,7 @@ class LangModel():
     def restore(self):
         if not os.path.exists(self.ckpt_path):
             raise FileNotFoundError('File {} does not exist'.format(self.ckpt_path))
-        return tf.keras.models.load_model(self.ckpt_path, compile=False)
+        self.model = tf.keras.models.load_model(self.ckpt_path, compile=False)
 
   # @tf.function
   # def train_step(self, input, target):
