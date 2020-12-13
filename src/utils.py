@@ -4,7 +4,7 @@ from copy import copy
 
 config = config()
 
-
+import os
 import sys
 sys.path.insert(0, config.skipthoughts_path) # '../skip_thoughts'
 sys.path.insert(0, config.dict_path)
@@ -14,7 +14,6 @@ from dict_use import dict_use
 dict_use = dict_use(config.dict_path)
 sen2id = dict_use.sen2id
 id2sen = dict_use.id2sen
-
 
 def normalize(x, e = 0.05):
     temp = copy(x)

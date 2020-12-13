@@ -137,7 +137,7 @@ def main():
         output_p = []
         for iter in range(config.sample_time):
             print('\n\n-------------------Iter: {}--------------------'.format(iter))
-            config.sample_prior = [1, 100.0/sequence_length, 1, 1]
+            config.sample_prior = [1, 500.0/sequence_length, 1, 1]
             if iter % 20 < 10:
                 config.threshold = 0
             else:
@@ -346,20 +346,24 @@ def main():
             if action == 3:
                 pos += 1
 
-            print(outputs)
             if outputs != []:
                 output_p.append(outputs[-1][0])
 
-        for num in range(config.min_length, 0, -1):
-            outputss = [x for x in outputs if len(x[0].split()) >= num]
+        for num in range(config.max_length, 0, -1):
+            outputss = [x for x in outputs if len(x[0].split()) == num]
+            if len(outputss) == 0:
+                continue
             print(num, outputss)
-            if outputs != []:
-                break
-            if outputss == []:
-                outputss.append([' '.join(id2sen(input)), 1])
+            # if outputs != []:
+            #     continue
+            # if outputss == []:
+            #     outputss.append([' '.join(id2sen(input)), 1])
             outputss = sorted(outputss, key=lambda x: x[1])[::-1]  # reverse list using [::-1]
+            outputss = outputss[:5]  # get 5 most likely sentneces of each length
+            outputss = map(lambda t: t[0], outputss)
             with open(config.use_output_path, 'a') as g:
-                g.write(outputss[0][0] + '\n')
+                for sent in outputss:
+                    g.write(sent + '\n')
 
             
         
