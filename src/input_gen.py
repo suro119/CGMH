@@ -137,7 +137,7 @@ def main():
         output_p = []
         for iter in range(config.sample_time):
             print('\n\n-------------------Iter: {}--------------------'.format(iter))
-            config.sample_prior = [1, 500.0/sequence_length, 1, 1]
+            config.sample_prior = [1, 10.0/sequence_length, 1, 1]
             if iter % 20 < 10:
                 config.threshold = 0
             else:

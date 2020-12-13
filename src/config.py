@@ -30,7 +30,7 @@ class config(object):
         self.max_grad_norm=5
         
         self.GPU='0'
-        self.mode='forward'                               
+        self.mode='use'                               
         self.sample_time=500
         self.record_time=[100,200,300]
         self.sample_sentence_number=119
