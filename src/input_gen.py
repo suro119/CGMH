@@ -25,11 +25,12 @@ class LangModel():
         self.model = tf.keras.Sequential([
             # B: batch size
             # M: max sentence length
+            # H: hidden size
             # V: vocab size
             tf.keras.layers.Masking(mask_value=config.dict_size+3),  # B, M
-            tf.keras.layers.Embedding(config.vocab_size, config.hidden_size),  # B, M
-            tf.keras.layers.LSTM(config.hidden_size, unit_forget_bias=False, return_sequences=True),  # B, M
-            tf.keras.layers.LSTM(config.hidden_size, unit_forget_bias=False, return_sequences=True),  # B, M
+            tf.keras.layers.Embedding(config.vocab_size, config.hidden_size),  # B, M, H
+            tf.keras.layers.LSTM(config.hidden_size, unit_forget_bias=False, return_sequences=True),  # B, M, H
+            tf.keras.layers.LSTM(config.hidden_size, unit_forget_bias=False, return_sequences=True),  # B, M, H
             tf.keras.layers.TimeDistributed(tf.keras.layers.Dense(config.vocab_size))  # B, M, V
         ])
         self.softmax = tf.keras.layers.Softmax()
@@ -71,20 +72,6 @@ class LangModel():
             raise FileNotFoundError('File {} does not exist'.format(self.ckpt_path))
         self.model = tf.keras.models.load_model(self.ckpt_path, compile=False)
 
-  # @tf.function
-  # def train_step(self, input, target):
-  #   with tf.GradientTape() as tape:
-  #     predictions = self.model(input)
-  #     loss = tf.reduce_mean(
-  #       tf.keras.losses.sparse_categorical_crossentropy(
-  #         target, predictions, from_logits=True))
-  #   grads = tape.gradient(loss, model.trainable_variables)
-  #   self.optimizer.apply_gradients(zip(grads, model.trainable_variables))
-  #
-  #   return loss
-
-
-
 
 def main():
     if config.mode == 'forward' or config.mode == 'use':
@@ -105,7 +92,6 @@ def main():
     # CGMH initialization: line 202-254 (수로)
     if config.mode=='use':
         #CGMH sampling for key_gen
-        # Load RNN Model (needs upgrading to TF 2.0)
         m_forward.restore()
         m_backward.restore()
         # Initially set to False
@@ -132,7 +118,7 @@ def main():
             sta_vec = sta_vec_list[sen_id%(config.num_steps-1)]
         print(sta_vec)
 
-        pos=0
+        pos = 0
         outputs = []
         output_p = []
         for iter in range(config.sample_time):
@@ -151,8 +137,7 @@ def main():
             if sta_vec[ind] == 1 and action in [0, 2]:
                 action = 3
 
-    # CGMH replacement: line 256-303 (정언)
-    #word replacement (action: 0)
+            # Word replacement (action: 0)
             sequence_length_minus = sequence_length - 1
             if action == 0 and ind < sequence_length_minus:
                 prob_old = m_forward.predict([input])
@@ -199,8 +184,7 @@ def main():
                     outputs.append([' '.join(id2sen(input)), prob_old_prob])
 
 
-    # CGMH insertion: line 305-364 (수로)
-    #word insertion(action:1)
+            # Word insertion (action:1)
             if action == 1:
                 # Sentence cannot be longer than config.num_steps words
                 if sequence_length >= config.num_steps:
@@ -265,8 +249,7 @@ def main():
                         action = 3
 
 
-    # CGMH deletion: line 367-450 (찬희)
-    #word deletion(action: 2)
+            # Word deletion (action: 2)
             if action == 2 and ind < sequence_length - 1:
                 if sequence_length <= 2:
                     # skip word
@@ -342,7 +325,7 @@ def main():
                 else:
                     action = 3
 
-            # Skip
+            # Skip (action: 3)
             if action == 3:
                 pos += 1
 

@@ -1,6 +1,6 @@
 class config(object):
     def __init__(self):
-        self.data_path='../data/question_data/1-billion.txt'            #path of data for training language model   
+        self.data_path='../data/question_data/questions.txt'            #path of data for training language model   
         self.use_data_path='../input/input.txt'                         #data path of keywords
         self.dict_path='../data/question_data/dict.pkl'                    #dictionary path
         self.emb_path='../data/question_data/emb.pkl'                  #word embedding path, used when config.sim=='word_max' or config.sim=='combine'
