@@ -109,13 +109,12 @@ inp = [
 ]
 '''
 
-print(sys.argv[1], sys.argv[2])
+# print(sys.argv[1], sys.argv[2])
 print("RESULTS from", sys.argv[1], 'to', sys.argv[2])
 
 
 with open('data.txt') as f:
     messages = json.load(f)
-
 
 
 for msglist in messages[int(sys.argv[1]): int(sys.argv[2])+1]:
