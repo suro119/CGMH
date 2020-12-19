@@ -1,6 +1,6 @@
 class config(object):
     def __init__(self):
-        self.data_path='../data/question_data/1-billion.txt'            #path of data for training language model   
+        self.data_path='../data/question_data/questions.txt'            #path of data for training language model   
         self.use_data_path='../input/input.txt'                         #data path of keywords
         self.dict_path='../data/question_data/dict.pkl'                    #dictionary path
         self.emb_path='../data/question_data/emb.pkl'                  #word embedding path, used when config.sim=='word_max' or config.sim=='combine'
@@ -36,7 +36,7 @@ class config(object):
         self.sample_sentence_number=119
         
         self.search_size=100
-        self.use_output_path='./output/output.txt'                     #output path
+        self.use_output_path='../output/output.txt'                     #output path
       
         #self.sample_prior=[1,1,1,1]
         self.action_prob=[0.3,0.3,0.3,0.1]                                         #the prior of 4 actions
@@ -50,5 +50,5 @@ class config(object):
         self.rare_since=30000
         self.just_acc_rate=0.0
         self.key_num=4
-        self.min_length=7
+        self.max_length=10
         #self.max_suggest_word=20
