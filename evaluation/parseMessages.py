@@ -12,24 +12,26 @@ messages = messages['messages']
 # print()
 
 botMessages = list(map(lambda x: x['content'], filter(lambda x: x['sender_name'] == 'Pandorabots', sorted(messages, key=lambda x: x['timestamp_ms']))))
-
 # for msg in botsMessages:
 #     print(msg)
 
 # print()
-
+'''
 indices = [i for i, x in enumerate(botMessages) if x == "Is that a smiley face?"]
-indices.insert(0, -1)
+
+'''
+indices = [15, 30, 45, 60, 75]
+indices.insert(0, 0)
 indices.append(len(botMessages))
 
-# print(indices)
+print(indices)
 
 cutMessages = []
 for i in range(len(indices)-1):
-    cutMessages.append(botMessages[indices[i]+1:indices[i+1]])
+    cutMessages.append(botMessages[indices[i]:indices[i+1]])
 
 print(len(botMessages))
 
 
-with open('data.txt', 'w') as outfile:
+with open('data2.txt', 'w') as outfile:
     json.dump(cutMessages, outfile)

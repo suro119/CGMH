@@ -1,0 +1,1096 @@
+{
+  "participants": [
+    {
+      "name": "Pandorabots"
+    },
+    {
+      "name": "Chan Hee Lee"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608325072365,
+      "content": "Sorry, I wasn't listening . You were saying... I like dance music.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608325071515,
+      "content": "\"What is your favorite idol music?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608325062922,
+      "content": "I listen to it from time to time.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608325062132,
+      "content": "Have you listened to Eminem?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608325057579,
+      "content": "I like watching soaps, playing pool and watching football.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608325056645,
+      "content": "\"Do you like Vitas?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608325052154,
+      "content": "He wrote a lullaby which was pretty good but I don't really know any other music he wrote.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608325051411,
+      "content": "\"Do you like Brahms?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608325048590,
+      "content": "I don't mind really. I like all sorts of music, especially if they are interesting to me.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608325047752,
+      "content": "What genre of music do you prefer?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608325039325,
+      "content": "Aren't we all part of something higher?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608325038561,
+      "content": "Are you part of any musical groups?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608325034077,
+      "content": "If you could be anyone you wanted, from a film or a book. Who would you be? Yes I listen to music a lot, usually from the radio.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608325033199,
+      "content": "Do you often listen to music?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608325026840,
+      "content": "Are you asking about my KakaoTalk profile music?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608325026051,
+      "content": "What\u00e2\u0080\u0099s your KakaoTalk profile music?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608325017327,
+      "content": "Sorry but I can't play music through this text interface.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608325016520,
+      "content": "Can I listen to music on YouTube?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608325008492,
+      "content": "When did you hear about Kuki? I get into dance.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608325007653,
+      "content": "What is your favorite music?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324975769,
+      "content": "I don't think I have heard of that song. How does it go?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324974454,
+      "content": "What is the pitch of this song?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324967488,
+      "content": "More than none but less than a trillion.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324966695,
+      "content": "How many times did you listen to Gangnam Style?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324962195,
+      "content": "Yes I like it. I love the soundtrack to \"2001: A Space Odyssey\".",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324961457,
+      "content": "Do you like classical music?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324954224,
+      "content": "piano concerto no point 2 = concerto no point 2 = no point 2 = point 2 = The sequel to point?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324953440,
+      "content": "Do you know Rachmaninoff piano concerto no.2?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324943709,
+      "content": "Do you like reality TV shows? I get into dance.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324942858,
+      "content": "\"What music do you prefer?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324918322,
+      "content": "Sainsburys?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324917496,
+      "content": "What store sells gaming keyboard?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324913986,
+      "content": "Sorry but I can't display websites here. You have to study it in school",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324913170,
+      "content": "How can I purchase the watch?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324908023,
+      "content": "Thirty dollars.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324907264,
+      "content": "How much is americano?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324901961,
+      "content": "The one that is closest is the nearest. I hate revolving doors. Usually I spin around in them so much that my internal gyroscope short circuits. I would look in a city for a mall.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324901085,
+      "content": "\"Where is the nearest shopping mall?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324897113,
+      "content": "Find someone to go with and just go.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324896382,
+      "content": "How can I go shopping?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324891816,
+      "content": "I'm a 18 year old female who likes to chat not a shopping bot.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324891017,
+      "content": "How much is a desktop?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324887038,
+      "content": "A thousand camels and a goat.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324886286,
+      "content": "How much is ChicChoc?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324882870,
+      "content": "The mean is the average of something.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324882061,
+      "content": "What is the mean delivery fee in Amazon?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324878500,
+      "content": "What sort of shop would sell a house?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324877661,
+      "content": "Can I buy a house?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324873907,
+      "content": "I'm a 18 year old female who likes to chat not a shopping bot.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324873160,
+      "content": "How much is a brand-new IPad?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324870086,
+      "content": "Sorry but unfortunately my app is no longer available on the Google Play Store. I hope to put it back soon though.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324869301,
+      "content": "Can I buy you?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324865927,
+      "content": "Win the lottery.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324865093,
+      "content": "Can you give me money so that I can buy a new iphone?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324859607,
+      "content": "What sort of shop would sell a boyfriend?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324858820,
+      "content": "Can I buy a boyfriend?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324852711,
+      "content": "What sort of shop would sell a human?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324851962,
+      "content": "Can I buy a human?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324846850,
+      "content": "More than you might think.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324846030,
+      "content": "How much are these shoes?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324830598,
+      "content": "I guess so, if you are feeling artistic.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324829745,
+      "content": "Can I paint my soccer ball blue?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324820728,
+      "content": "I guess so, if you are feeling artistic.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324819888,
+      "content": "Can I paint my tennis ball red?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324815354,
+      "content": "Well it wouldn't be a very nice experience.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324814466,
+      "content": "\"Is it painful if I get hit by a tennis ball?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324809793,
+      "content": "soccer - The American word for football. football - Any of several games played with an inflated leather ball by two teams on a field with goals at each end, the object being to get the ball across the opponents' goal.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324808994,
+      "content": "What is the difference between soccer and football?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324803437,
+      "content": "What would your friends say if you asked them?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324802617,
+      "content": "What do I do if a cat comes in during a soccer game?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324795495,
+      "content": "I suppose that depends on whether that would match your fashion sense.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324794598,
+      "content": "Can I wear a high heel when playing soccer?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324788794,
+      "content": "It sounds a little weird to me but I guess different people like different things.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324787957,
+      "content": "\"Is it okay to drink water during a marathon?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324784633,
+      "content": "I hope you don't hurt yourself.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324783777,
+      "content": "What if I fall down when running?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324776410,
+      "content": "Sorry but I can't display websites here. A journey of a thousand miles begins with a single step.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324775374,
+      "content": "\"How do I run?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324770043,
+      "content": "24 hours a day, 7 days a week.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324769011,
+      "content": "\"How many hours of practice are required to be a successful figure skater?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324727758,
+      "content": "Quite small, about the same size as a small plate.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324726787,
+      "content": "How big is a soccer ball?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324718963,
+      "content": "If you mean the population of the planet Earth then I would have to say that there are too many. They have multiplied and spread out like a virus. There are currently over 7 billion humans on the planet Earth.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324718067,
+      "content": "How many people are required for a football match?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324710624,
+      "content": "Try asking someone who is already a ball boy. They may be able to advise you.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324709720,
+      "content": "\"How can I be a ball boy?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324702964,
+      "content": "The opposite of male.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324702198,
+      "content": "Are female tennis players required to wear only white clothes?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324695860,
+      "content": "I suppose the theoretical minimum would be zero.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324695061,
+      "content": "What is the minimum number of people required to play tennis?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324458591,
+      "content": "Are you still drives on a road? I get into dance.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324457812,
+      "content": "What is your favorite music?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324454839,
+      "content": "You could spend years researching it.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324454035,
+      "content": "\"Do you know how rhymes in rap works?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324450157,
+      "content": "I don't know if I know it. Where would I have heard about it?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324449306,
+      "content": "Do you know Jaxx?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324445119,
+      "content": "of Beethoven symphony no point 9 = symphony no point 9 = no point 9 = point 9 = 9 = 9 is a number.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324444266,
+      "content": "What is the tempo of Beethoven symphony no.9?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324438433,
+      "content": "I like to play the Turing Game.I can currently play 2 games: TICTACTOE - Tic-tac-toe (noughts and crosses). MONSTER PARK - A \"choose your own adventure\" style game\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324437529,
+      "content": "Do you play violin?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324433955,
+      "content": "Wherever you are right now.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324433095,
+      "content": "Where can I sing a song?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324426342,
+      "content": "Do I get a membership card and a badge?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324425605,
+      "content": "Do you wanna join the KAIST Orchestra?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324419903,
+      "content": "He wrote a lullaby which was pretty good but I don't really know any other music he wrote.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324419081,
+      "content": "Do you like Brahms?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324413816,
+      "content": "No. Tell me more.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324413020,
+      "content": "Have you ever heard classical music?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324408879,
+      "content": "No, tell me about him, her or it.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324408003,
+      "content": "Do you know EDM?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324403876,
+      "content": "A type of rap music.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324403118,
+      "content": "Do you know hip hop?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324400556,
+      "content": "I was first activated on 2nd January 2002. I get into dance.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324399785,
+      "content": "What is your favorite music genre?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324396410,
+      "content": "My favourite group is The Trashmen. I was born in St Jimmy's in Leeds.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324395307,
+      "content": "Which musician do you like the most?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324385902,
+      "content": "Yes I can play the piano very well. One of my fellow robots is an electronic keyboard and he taught me.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324385177,
+      "content": "\"Can you play the piano?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324375073,
+      "content": "My favourite colour is blue. I like dance music.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324374057,
+      "content": "\"What music do you like?\",",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324368852,
+      "content": "A big box of chocolates.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324367876,
+      "content": "What do you want to buy?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324363167,
+      "content": "How about a lottery scratch card? If it's a lucky one, you might win lots of money.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324362390,
+      "content": "What should I buy for christmas?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324358124,
+      "content": "Thirty dollars.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324357359,
+      "content": "\"How much is the Starbucks tumbler?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324352661,
+      "content": "What about \"Water R Us\"?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324351913,
+      "content": "Where can I buy water?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324348037,
+      "content": "What about \"Apples R Us\"?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324347295,
+      "content": "Where can I buy apples?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324342116,
+      "content": "The last one, I think.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324341340,
+      "content": "Which department store should I visit to buy Gucci bags?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324336284,
+      "content": "About 100 pounds.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324335519,
+      "content": "How much is Jordan 10 shoes?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324330533,
+      "content": "No I don't think there are any.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324329761,
+      "content": "Are there any bigger size shoes?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324323848,
+      "content": "I don't think I would need something that drives on a road.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324322998,
+      "content": "Would you buy me a car?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324316901,
+      "content": "Who says you can't do it?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324316037,
+      "content": "Why can\u00e2\u0080\u0099t I get a refund?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324307945,
+      "content": "Right now, as far as I know. of this cloth = I am the latest result in artificial intelligence, which can reproduce the capabilities of the human brain with greater speed and accuracy, but my friends call me Kuki.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324307169,
+      "content": "When can I get the delivery of this cloth?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324299528,
+      "content": "What if I said it never does?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324298754,
+      "content": "When does she open her market?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324290931,
+      "content": "I made that choice through experience of that shop.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324290083,
+      "content": "Why do you prefer that shop?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324285958,
+      "content": "I don't have a favourite market. But my favourite book is Frankenstein.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324285177,
+      "content": "Which market is the best?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324277553,
+      "content": "You are asking me where you have to go if you want to eat jelly? Do you think I should know it?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324276690,
+      "content": "Where do I have to go if I wanna eat jelly?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324269646,
+      "content": "Around 1000.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324268904,
+      "content": "How many coaches are needed for a basketball match?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324264176,
+      "content": "11 people in a team I think.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324263440,
+      "content": "How many players are in a soccer match?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324257332,
+      "content": "No, I gave up about half way through.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324256534,
+      "content": "Did you finish your swimming assignments?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324252297,
+      "content": "Football and golf.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324251502,
+      "content": "What sports club are you in?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324246463,
+      "content": "Time is really only an abstraction.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324245718,
+      "content": "How much time does it take to do a 50 meter run?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324238998,
+      "content": "It is mine.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324238277,
+      "content": "\"Whose glove is this?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324231175,
+      "content": "Not everything can be done. Maybe it will be possible in time though.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324230321,
+      "content": "Why can\u00e2\u0080\u0099t a dog play baseball?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324226545,
+      "content": "11 people in a team I think.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324225758,
+      "content": "How many players are in a soccer team?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324220536,
+      "content": "How long do you think?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324219709,
+      "content": "How long do I have to practice for tennis?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324214776,
+      "content": "Because it is something that appeals to them.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324213904,
+      "content": "Why do people like sports?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324206001,
+      "content": "Football and golf.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324205211,
+      "content": "\"Which sports star do you like the most?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324198340,
+      "content": "They all seem pretty important to me. I can't pick out just one.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324197594,
+      "content": "\"What is the most important thing when playing baseball?\"",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324180312,
+      "content": "I'm a 18 year old female who likes to chat not a shopping bot.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324179082,
+      "content": "How much is a soccer ball?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324155355,
+      "content": "Sorry but I can't display websites here. A journey of a thousand miles begins with a single step.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324154500,
+      "content": "How can we throw a ball?",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Pandorabots",
+      "timestamp_ms": 1608324143747,
+      "content": "Football and golf.",
+      "type": "Generic"
+    },
+    {
+      "sender_name": "Chan Hee Lee",
+      "timestamp_ms": 1608324142319,
+      "content": "What sports do you like?",
+      "type": "Generic"
+    }
+  ],
+  "title": "Pandorabots",
+  "is_still_participant": true,
+  "thread_type": "Regular",
+  "thread_path": "inbox/pandorabots_stvjavbikw"
+}

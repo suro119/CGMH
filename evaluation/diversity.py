@@ -113,7 +113,7 @@ inp = [
 print("RESULTS from", sys.argv[1], 'to', sys.argv[2])
 
 
-with open('data.txt') as f:
+with open('data2.txt') as f:
     messages = json.load(f)
 
 

@@ -1,0 +1,1 @@
+{"index": 12, "p_sent_score": 0.44153030682629474}{"index": 13, "p_sent_score": 0.5750283205045286}{"index": 14, "p_sent_score": 0.4027960964213898}{"index": 15, "p_sent_score": 0.5385657528634438}{"index": 16, "p_sent_score": 0.42347882538010245}
