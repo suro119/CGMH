@@ -1,4 +1,6 @@
 import spacy
+import json
+import sys
 
 def processText(text):
     nlp = spacy.load("en_core_web_lg")
@@ -11,6 +13,8 @@ def processText(text):
             continue
         if token.lemma_ == '-PRON-':
             continue
+        if 'music' in token.text:
+            continue
         result.append(token.lemma_)
     return " ".join(result)
 
@@ -21,8 +25,9 @@ def compareSents(sent1, sent2):
     # Sentence level comparison
     tokens1 = nlp(sent1)
     tokens2 = nlp(sent2)
-    sent_similarity = tokens1.similarity(tokens2)
-    print("1. Sentence level comparison:", sent_similarity, "")
+    sent_similarity = 0
+    #sent_similarity = tokens1.similarity(tokens2)
+    #print("1. Sentence level comparison:", sent_similarity, "")
 
     # Word level comparison
     sent1_f = processText(sent1)
@@ -34,19 +39,24 @@ def compareSents(sent1, sent2):
     processed_sent_similarity = tokens1.similarity(tokens2)
     print("2. Processed sentence level comparison:", processed_sent_similarity, "")
 
+    word_similarity = 0
+    '''
     length = 0
     score = 0
-
+    word_similarity = 0
     for token1 in tokens1:
         for token2 in tokens2:
             if (token1 and token1.vector_norm and token2 and token2.vector_norm):
             # print("*", token1.text, token2.text, token1.similarity(token2))
                 length += 1
                 score += token1.similarity(token2)
-    word_similarity = score/length
+    if (length > 0):
+        word_similarity = score/length
 
     print("3. Word level comparison:", word_similarity, "")
+    '''
     return sent_similarity, processed_sent_similarity, word_similarity
+    
 
 
 def calcSimilarityScore(inp):
@@ -79,28 +89,37 @@ def calcSimilarityScore(inp):
 
     return avg_sent_score, avg_p_sent_score, avg_word_score
 
-
-
 '''
-inp = ["How do I make the planes fly?", 
-"What can I do if there is emergent game issue?", 
-"What can I do if my Flash Player version is too old?",
-"What can I do if the game stuck on loading page?",
-"What can I do if the Flash Player crashed?",
-"What can I do if I can't login?",
-"How could I get the chance to play the game?",
-"Can I get high quality souls with my low quality souls?",
-"How many qualities of Hero Souls there are?",
-"What's the usage of Hero Soul?",
-"Why some players get better reward from Conquest?",
-"Is all the mining area the same?",
-"Why can't I attack some players' mine?",
-"What's the benefit if a guild occupied a mine area?"]
+inp = [
+"What music do you prefer?",
+"Do you know Rachmaninoff piano concerto no.2?",
+"Do you like classical music?",
+"How many times did you listen to Gangnam Style?",
+"What is the pitch of this song?",
+"What is your favorite music?",
+"Can I listen to music on YouTube?",
+"What’s your KakaoTalk profile music?",
+"Do you often listen to music?",
+"Are you part of any musical groups?",
+"What genre of music do you prefer?",
+"Do you like Brahms?",
+"Do you like Vitas?",
+"Have you listened to Eminem?",
+"What is your favorite idol music?"
+]
 '''
 
-inp = ["Where is the nearest convenience store from the campus?", 
-"What should I have for dinner, inside or outside?", 
-"Can you recommend good restaurants near west gate?",
-"Where do you think is better, lotteria or Kaimaru?"]
+print(sys.argv[1], sys.argv[2])
+print("RESULTS from", sys.argv[1], 'to', sys.argv[2])
 
-calcSimilarityScore(inp)
+
+with open('data.txt') as f:
+    messages = json.load(f)
+
+
+
+for msglist in messages[int(sys.argv[1]): int(sys.argv[2])+1]:
+    sent_score, p_sent_score, word_score = calcSimilarityScore(msglist[:])
+    result = {'index': messages.index(msglist), 'p_sent_score': p_sent_score}
+    with open('result.txt', 'a') as outfile:
+        json.dump(result, outfile)
